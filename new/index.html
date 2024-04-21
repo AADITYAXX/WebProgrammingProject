@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Resume Builder</h1>
+    <form id="resumeForm" enctype="multipart/form-data"> <label for="profilePhoto">Profile Photo:</label>
+        <input type="file" id="profilePhoto" accept="image/*">
+        <br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <br>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone">
+        <br>
+        <h2>Experience</h2>
+        <div id="experience-container">
+            <div class="experience-section">
+                <label for="company1">Company:</label>
+                <input type="text" id="company1" required>
+                <br>
+                <label for="title1">Title:</label>
+                <input type="text" id="title1" required>
+                <br>
+                <label for="startDate1">Start Date:</label>
+                <input type="date" id="startDate1">
+                <br>
+                <label for="endDate1">End Date:</label>
+                <input type="date" id="endDate1">
+                <br>
+                <textarea id="description1" rows="4" placeholder="Job Description"></textarea>
+            </div>
+        </div>
+        <button type="button" id="addExperience">Add Experience</button>
+        <br>
+        <h2>Skills</h2>
+        <div id="skills-container">
+            <input type="text" id="skill1" placeholder="Skill 1">
+            <br>
+            <input type="text" id="skill2" placeholder="Skill 2">
+            <br>
+        </div>
+        <button type="button" id="addSkill">Add Skill</button>
+        <br>
+        <br>
+        <button type="submit">Generate Resume</button>
+    </form>
+    <div id="resume-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
